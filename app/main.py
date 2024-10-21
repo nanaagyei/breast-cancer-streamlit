@@ -5,8 +5,8 @@ import pandas as pd
 import plotly.graph_objects as go
 
 # Import the scaler
-scaler = pickle.load(open("../model/scaler.pkl", "rb"))
-model = pickle.load(open("../model/model.pkl", "rb"))
+scaler = pickle.load(open("scaler.pkl", "rb"))
+model = pickle.load(open("model.pkl", "rb"))
 
 
 
