@@ -5,13 +5,13 @@ import pandas as pd
 import plotly.graph_objects as go
 
 # Import the scaler
-scaler = pickle.load(open("/workspaces/breast-cancer-streamlit/app/scaler.pkl", "rb"))
-model = pickle.load(open("/workspaces/breast-cancer-streamlit/app/model.pkl", "rb"))
+scaler = pickle.load(open("scaler.pkl", "rb"))
+model = pickle.load(open("model.pkl", "rb"))
 
 
 
 def load_data():
-    data = pd.read_csv("/workspaces/breast-cancer-streamlit/data/data.csv")
+    data = pd.read_csv("data/data.csv")
     return data
 
 
@@ -189,7 +189,7 @@ def main():
         layout="wide",
         initial_sidebar_state="expanded",
     )
-    with open("/workspaces/breast-cancer-streamlit/app/style.css") as f:
+    with open("style.css") as f:
         st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html=True)
 
     input_data = add_sidebar()
